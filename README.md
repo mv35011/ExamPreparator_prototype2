@@ -56,12 +56,25 @@ Exam Preparator is an AI-driven web application designed to help students effici
   ```
   streamlit run main.py
   ```
+6.**Download the model for offline mode(llm_mechs2.py)**
+  ```
+  
+   mkdir -p models/Mistral-7B-Instruct-v0.1 models/all-MiniLM-L6-v2
+
+   # Download Mistral-7B-Instruct-v0.1 (LLM)
+   huggingface-cli download mistralai/Mistral-7B-Instruct-v0.1 --local-dir models/Mistral-7B-Instruct-v0.1 --local-dir-use-symlinks False
+   
+   # Download all-MiniLM-L6-v2 (Embeddings)
+   huggingface-cli download sentence-transformers/all-MiniLM-L6-v2 --local-dir models/all-MiniLM-L6-v2 --local-dir-use-symlinks False
+
+  ```
 
 ## 📜 Usage
 1. Upload PDFs or images of question papers and notes.
 2. The AI extracts key information and generates study material.
 3. View summarized notes and important questions.
 4. Use the web app to structure your exam preparation effectively.
+5. suggesting offline usage of model
 
 ## 🚧 Roadmap
 - [ ] Implement a user-friendly frontend using React/Next.js.
